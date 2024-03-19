@@ -156,3 +156,82 @@ input[type=email],input[type=password],input[type=text]  {
     gap: 20px;
 
   }
+  #signupform{
+    display: none;
+  }
+
+  
+  #signupinfo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+
+
+  }
+  #signupinfo p{
+    font-size:x-large;
+    color: #a59d9d;
+    font-weight: 700;
+    width: 70%;
+    text-align: center;
+  }
+
+
+  /* signupform */
+
+  #signupform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    display: none;
+  }
+  #signup-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #heading{
+    font-weight: 600;
+    font-family: cursive;
+    font-size: 4vw;
+    color: #a59d9d;
+    text-align: center;
+  }
+  #but{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  
+  }
+
+  #signininfo{
+    display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+    
+  
+  }
+  #signininfo p{
+  
+    font-size:x-large;
+    color: #a59d9d;
+    font-weight: 700;
+    width: 70%;
+    text-align: center;
+  
+  }
+  #hello{
+    color: rgb(89, 89, 243);
+  }
+  #hello:hover{
+    cursor: pointer;
+    color: rgb(59, 59, 240);
+  }
