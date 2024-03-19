@@ -458,3 +458,62 @@ input[type=email],input[type=password],input[type=text]  {
   background-size: cover;
 
 }
+.facultyheading{
+    font-size: 11vw;
+    color: rgb(182, 174, 174);
+    text-align: center;
+    text-shadow: 8px 8px 4px rgb(104, 100, 100);
+   width: 100%;
+  font-weight: 700;
+  font-family: cursive;
+  
+  }
+  
+  .facultylist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    gap: 20px;
+  }
+  .facultycard{
+    width: 355px;
+   background-color:white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   border-radius: 20px;
+   height: 450px;
+   gap: 40px;
+  }
+  
+#facultycard1,#facultycard3{
+    transform: scale(.9);
+  }
+  .facultycard img{
+    border-radius: 50%;
+  }
+  
+  .teacherinfo{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+  }
+  
+  .teacherinfo h2{
+    color:#6b6666;
+    font-weight: 800;
+    font-family: cursive;
+    font-size: 40px;
+  
+  }
+  .teacherinfo p{
+    color: rgb(146, 144, 144);
+    font-size: 15px;
+    font-weight: 700;
+  
+  }
