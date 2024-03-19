@@ -15,32 +15,31 @@ html,body{
     height: 100%;
 }
 .navbar{
-    z-index: 9999;
-    position: fixed;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      height: 60px;
-      background-color: rgb(171, 175, 161);
-      color: white;
-  
-  }
-  .link{
-      transition: all ease .4s;
-      font-weight: 500;
-      font-size: x-large;
-  }
-  .option{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      font-size: larger;
-  
-  }
+  z-index: 9999;
+  position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(171, 175, 161);
+    color: white;
 
-  .link:hover{
+}
+.link{
+    transition: all ease .4s;
+    font-weight: 500;
+    font-size: x-large;
+}
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: larger;
+
+}
+.link:hover{
     color:rgb(89, 60, 255);
     border-bottom: 2px solid rgb(237, 230, 230);
     cursor: pointer;
@@ -84,7 +83,6 @@ html,body{
     margin: auto;
 
 }
-
 .left,.right,.signinpage{
     width: 50%;
     height: 70%;
@@ -106,6 +104,7 @@ html,body{
     background-color:white;
 
 }
+
 input[type=email],input[type=password],input[type=text]  {
     width: 300px;
     padding: 12px 20px;
@@ -131,7 +130,7 @@ input[type=email],input[type=password],input[type=text]  {
     align-items: center;
     justify-content: center;
   }
-
+  
   input[type=submit]:hover {
     background-color: #71e915;
   }
@@ -156,6 +155,7 @@ input[type=email],input[type=password],input[type=text]  {
     gap: 20px;
 
   }
+
   #signupform{
     display: none;
   }
@@ -182,256 +182,260 @@ input[type=email],input[type=password],input[type=text]  {
 
   /* signupform */
 
-  #signupform{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 50px;
-    display: none;
-  }
-  #signup-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  #heading{
-    font-weight: 600;
-    font-family: cursive;
-    font-size: 4vw;
-    color: #a59d9d;
-    text-align: center;
-  }
-  #but{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  
-  }
+#signupform{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  display: none;
+}
+#signup-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#heading{
+  font-weight: 600;
+  font-family: cursive;
+  font-size: 4vw;
+  color: #a59d9d;
+  text-align: center;
+}
+#but{
+  justify-content: center;
+  display: flex;
+  align-items: center;
 
-  #signininfo{
-    display: none;
+}
+
+#signininfo{
+  display: none;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 40px;
+  
+
+}
+#signininfo p{
+
+  font-size:x-large;
+  color: #a59d9d;
+  font-weight: 700;
+  width: 70%;
+  text-align: center;
+
+}
+#hello{
+  color: rgb(89, 89, 243);
+}
+#hello:hover{
+  cursor: pointer;
+  color: rgb(59, 59, 240);
+}
+
+
+
+
+
+
+
+
+
+/* CSS styles for the carousel */
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: -22px;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
   flex-direction: column;
-  gap: 40px;
-    
-  
+  border-radius: 8px;
+  background-color: white;
+}
+.carousel .card .img {
+  background: #8B53FF;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+  color: black;
+}
+.carousel .card span {
+  color: rgb(89, 60, 255);
+  font-size: x-large;
+  font-size: 1.31rem;
+}
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
   }
-  #signininfo p{
-  
-    font-size:x-large;
-    color: #a59d9d;
-    font-weight: 700;
-    width: 70%;
-    text-align: center;
-  
+}
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
   }
-  #hello{
-    color: rgb(89, 89, 243);
-  }
-  #hello:hover{
-    cursor: pointer;
-    color: rgb(59, 59, 240);
-  }
+}
 
+.courses{
+  width: 100%;
+  height: 650px;
+  background-color: rgb(187, 142, 232);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  transition: all ease .5s;
 
-  /* CSS styles for the carousel */
-.wrapper {
-    max-width: 1100px;
-    width: 100%;
-    position: relative;
-  }
-  .wrapper i {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-  }
+}
+.card:hover{
+  transform: scale(0 1.12);
+  z-index: 99;
+}
+#courseheading{
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  background-color: rgb(187, 142, 232);
+  font-size: 120px;
+  font-weight: 600;
+  text-shadow: 5px 5px 3px black;
+  color: white;
+padding-top: 20px;
+  
 
-  .wrapper i:active{
-    transform: translateY(-50%) scale(0.85);
-  }
-  .wrapper i:first-child{
-    left: -22px;
-  }
-  .wrapper i:last-child{
-    right: -22px;
-  }
-  .wrapper .carousel{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    border-radius: 8px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-  }
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
-  .carousel.no-transition {
-    scroll-behavior: auto;
-  }
-  .carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-  }
+}
 
-  .carousel.dragging .card {
-    cursor: grab;
-    user-select: none;
-  }
-  .carousel :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .carousel .card {
-    scroll-snap-align: start;
-    height: 342px;
-    list-style: none;
-    background: #fff;
-    cursor: pointer;
-    padding-bottom: 15px;
-    flex-direction: column;
-    border-radius: 8px;
-    background-color: white;
-  }
-  .carousel .card .img {
-    background: #8B53FF;
-    height: 148px;
-    width: 148px;
-    border-radius: 50%;
-  }
-  .card .img img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-  }
-  .carousel .card h2 {
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 30px 0 5px;
-    color: black;
-  }
-  .carousel .card span {
-    color: rgb(89, 60, 255);
-    font-size: x-large;
-    font-size: 1.31rem;
-  }
-  @media screen and (max-width: 900px) {
-    .wrapper .carousel {
-      grid-auto-columns: calc((100% / 2) - 9px);
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .wrapper .carousel {
-      grid-auto-columns: 100%;
-    }
-  }
-  .courses{
-    width: 100%;
-    height: 650px;
-    background-color: rgb(187, 142, 232);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .card{
-    transition: all ease .5s;
-  
-  }
-  .card:hover{
-    transform: scale(0 1.12);
-    z-index: 99;
-  }
-  #courseheading{
-    width: 100%;
-    height: 130px;
-    text-align: center;
-    background-color: rgb(187, 142, 232);
-    font-size: 120px;
-    font-weight: 600;
-    text-shadow: 5px 5px 3px black;
-    color: white;
-  padding-top: 20px;
-    
-  
-  }
+.nothing{
+  text-decoration: none;
+  color: white;
+}
 
-  .nothing{
-    text-decoration: none;
-    color: white;
-  }
-  
-  .program{
-    width: 100%;
-    height: 900px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-  
-  }
-  .firstpart{
-    width: 100%;
-    height: 30%;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  .thirdpart{
-    width: 100%;
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:90%
-  
-  }
-  .firstpart h1{
-    font-size: 11vw;
-    color: rgb(47, 47, 47);
-  }
-  .firstpart p{
-    font-size: 30px;
-    width: 50%;
-    color: rgb(108, 104, 104);
-    text-align: center;
-  }
-  .thirdpartinfo{
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-  
-  }
-  .thirdpartinfo h1{
-    font-size: 5vw;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  
-  }
-  
+.program{
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+
+}
+.firstpart{
+  width: 100%;
+  height: 30%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.thirdpart{
+  width: 100%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:90%
+
+}
+.firstpart h1{
+  font-size: 11vw;
+  color: rgb(47, 47, 47);
+}
+.firstpart p{
+  font-size: 30px;
+  width: 50%;
+  color: rgb(108, 104, 104);
+  text-align: center;
+}
+.thirdpartinfo{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+.thirdpartinfo h1{
+  font-size: 5vw;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
 }
 .thirdpartinfo p{
   font-size: x-large;
@@ -458,62 +462,63 @@ input[type=email],input[type=password],input[type=text]  {
   background-size: cover;
 
 }
+
 .facultyheading{
-    font-size: 11vw;
-    color: rgb(182, 174, 174);
-    text-align: center;
-    text-shadow: 8px 8px 4px rgb(104, 100, 100);
-   width: 100%;
-  font-weight: 700;
-  font-family: cursive;
-  
-  }
-  
-  .facultylist{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 80%;
-    gap: 20px;
-  }
-  .facultycard{
-    width: 355px;
-   background-color:white;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   border-radius: 20px;
-   height: 450px;
-   gap: 40px;
-  }
-  
+  font-size: 11vw;
+  color: rgb(182, 174, 174);
+  text-align: center;
+  text-shadow: 8px 8px 4px rgb(104, 100, 100);
+ width: 100%;
+font-weight: 700;
+font-family: cursive;
+
+}
+
+.facultylist{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  gap: 20px;
+}
+.facultycard{
+  width: 355px;
+ background-color:white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ border-radius: 20px;
+ height: 450px;
+ gap: 40px;
+}
+
 #facultycard1,#facultycard3{
-    transform: scale(.9);
-  }
-  .facultycard img{
-    border-radius: 50%;
-  }
-  
-  .teacherinfo{
-    display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   gap: 10px;
-  }
-  
-  .teacherinfo h2{
-    color:#6b6666;
-    font-weight: 800;
-    font-family: cursive;
-    font-size: 40px;
-  
-  }
-  .teacherinfo p{
-    color: rgb(146, 144, 144);
-    font-size: 15px;
-    font-weight: 700;
-  
-  }
+  transform: scale(.9);
+}
+.facultycard img{
+  border-radius: 50%;
+}
+
+.teacherinfo{
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 10px;
+}
+
+.teacherinfo h2{
+  color:#6b6666;
+  font-weight: 800;
+  font-family: cursive;
+  font-size: 40px;
+
+}
+.teacherinfo p{
+  color: rgb(146, 144, 144);
+  font-size: 15px;
+  font-weight: 700;
+
+}

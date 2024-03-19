@@ -22,6 +22,7 @@ var signinexchange=document.getElementById("signinexchange").addEventListener('c
     signinheading.style.display="block";
     signininfo.style.display="none";
 })
+
 exchangesignup.addEventListener('click',()=>{
 
     
@@ -38,6 +39,8 @@ exchangesignup.addEventListener('click',()=>{
 
     
 });
+
+
 
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
@@ -59,6 +62,7 @@ carouselChildrens.slice(0, cardPerView).forEach(card => {
     carousel.insertAdjacentHTML("beforeend", card.outerHTML);
 });
 
+
 carousel.classList.add("no-transition");
 carousel.scrollLeft = carousel.offsetWidth;
 carousel.classList.remove("no-transition");
@@ -68,3 +72,39 @@ arrowBtns.forEach(btn => {
         carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
     });
 });
+
+
+
+const infiniteScroll = () => {
+    
+    if(carousel.scrollLeft === 0) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+        carousel.classList.remove("no-transition");
+    }
+   
+    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+    }
+
+   
+    clearTimeout(timeoutId);
+    if(!wrapper.matches(":hover")) autoPlay();
+}
+
+const autoPlay = () => {
+    if(window.innerWidth < 800 || !isAutoPlay) return; 
+   
+    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 1000);
+}
+autoPlay();
+
+
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
+
+
+
