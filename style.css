@@ -131,3 +131,28 @@ input[type=email],input[type=password],input[type=text]  {
     align-items: center;
     justify-content: center;
   }
+
+  input[type=submit]:hover {
+    background-color: #71e915;
+  }
+  .brand{
+    font-weight: 600;
+    font-family: cursive;
+    font-size: 4vw;
+    color: #a59d9d;
+
+  }
+  .brand2{
+    font-weight: 600;
+    font-family: cursive;
+    font-size: 4vw;
+    color: white;
+  }
+  #signin-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+  }
