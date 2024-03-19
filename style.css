@@ -373,4 +373,88 @@ input[type=email],input[type=password],input[type=text]  {
     
   
   }
+
+  .nothing{
+    text-decoration: none;
+    color: white;
+  }
   
+  .program{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  
+  }
+  .firstpart{
+    width: 100%;
+    height: 30%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .thirdpart{
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:90%
+  
+  }
+  .firstpart h1{
+    font-size: 11vw;
+    color: rgb(47, 47, 47);
+  }
+  .firstpart p{
+    font-size: 30px;
+    width: 50%;
+    color: rgb(108, 104, 104);
+    text-align: center;
+  }
+  .thirdpartinfo{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  
+  }
+  .thirdpartinfo h1{
+    font-size: 5vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  
+  }
+  
+}
+.thirdpartinfo p{
+  font-size: x-large;
+  color: rgb(98, 98, 227);
+  font-weight: 500;
+}
+
+
+/* Faculty */
+
+.faculty{
+
+  width: 100%;
+  height: 800px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("teach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
