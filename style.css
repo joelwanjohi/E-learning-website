@@ -39,3 +39,24 @@ html,body{
       font-size: larger;
   
   }
+
+  .link:hover{
+    color:rgb(89, 60, 255);
+    border-bottom: 2px solid rgb(237, 230, 230);
+    cursor: pointer;
+}
+.contactus{
+    padding: 12px;
+    background-color: rgb(89, 60, 255);
+    border-radius: 25px;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    box-shadow: none;
+    transition: all ease .6s;
+
+}
+.contactus:hover{
+    background-color: #71e915;
+    cursor: pointer;
+}
